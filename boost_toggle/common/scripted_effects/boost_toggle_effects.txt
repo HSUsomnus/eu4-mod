@@ -1,0 +1,83 @@
+boost_toggle_monthly_effect = {
+	every_country = {
+		limit = {
+			ai = no
+			OR = {
+				has_country_flag = boost_settler_off
+				has_country_flag = boost_settler_200
+				has_country_flag = boost_settler_500
+				has_country_flag = boost_settler_1000
+				has_country_flag = boost_morale_off
+				has_country_flag = boost_morale_200
+				has_country_flag = boost_morale_500
+				has_country_flag = boost_morale_1000
+			}
+		}
+
+		### A 组：全局移民 ###
+		if = {
+			limit = { has_country_flag = boost_settler_off }
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			clr_country_flag = boost_settler_off
+		}
+		if = {
+			limit = { has_country_flag = boost_settler_200 }
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = { name = settler_boost_200 duration = -1 }
+			clr_country_flag = boost_settler_200
+		}
+		if = {
+			limit = { has_country_flag = boost_settler_500 }
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = { name = settler_boost_500 duration = -1 }
+			clr_country_flag = boost_settler_500
+		}
+		if = {
+			limit = { has_country_flag = boost_settler_1000 }
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = { name = settler_boost_1000 duration = -1 }
+			clr_country_flag = boost_settler_1000
+		}
+
+		### B 组：军队士气 ###
+		if = {
+			limit = { has_country_flag = boost_morale_off }
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			clr_country_flag = boost_morale_off
+		}
+		if = {
+			limit = { has_country_flag = boost_morale_200 }
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = { name = morale_boost_200 duration = -1 }
+			clr_country_flag = boost_morale_200
+		}
+		if = {
+			limit = { has_country_flag = boost_morale_500 }
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = { name = morale_boost_500 duration = -1 }
+			clr_country_flag = boost_morale_500
+		}
+		if = {
+			limit = { has_country_flag = boost_morale_1000 }
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = { name = morale_boost_1000 duration = -1 }
+			clr_country_flag = boost_morale_1000
+		}
+	}
+}

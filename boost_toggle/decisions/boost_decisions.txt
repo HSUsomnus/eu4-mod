@@ -1,0 +1,148 @@
+country_decisions = {
+
+	############################
+	### A 组：全局移民增加    ###
+	############################
+
+	settler_set_200 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = {
+				name = settler_boost_200
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	settler_set_500 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = {
+				name = settler_boost_500
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	settler_set_1000 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+			add_country_modifier = {
+				name = settler_boost_1000
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	settler_off = {
+		potential = {
+			ai = no
+			OR = {
+				has_country_modifier = settler_boost_200
+				has_country_modifier = settler_boost_500
+				has_country_modifier = settler_boost_1000
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = settler_boost_200
+			remove_country_modifier = settler_boost_500
+			remove_country_modifier = settler_boost_1000
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	############################
+	### B 组：军队士气        ###
+	############################
+
+	morale_set_200 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = {
+				name = morale_boost_200
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	morale_set_500 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = {
+				name = morale_boost_500
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	morale_set_1000 = {
+		potential = {
+			ai = no
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+			add_country_modifier = {
+				name = morale_boost_1000
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	morale_off = {
+		potential = {
+			ai = no
+			OR = {
+				has_country_modifier = morale_boost_200
+				has_country_modifier = morale_boost_500
+				has_country_modifier = morale_boost_1000
+			}
+		}
+		allow = { always = yes }
+		effect = {
+			remove_country_modifier = morale_boost_200
+			remove_country_modifier = morale_boost_500
+			remove_country_modifier = morale_boost_1000
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

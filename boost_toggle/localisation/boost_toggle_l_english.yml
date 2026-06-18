@@ -1,0 +1,34 @@
+﻿l_english:
+ # Event Modifiers
+ settler_boost_200:0 "Migration Boost +200"
+ settler_boost_200_desc:0 "Global colonial growth increased by 200."
+ settler_boost_500:0 "Migration Boost +500"
+ settler_boost_500_desc:0 "Global colonial growth increased by 500."
+ settler_boost_1000:0 "Migration Boost +1000"
+ settler_boost_1000_desc:0 "Global colonial growth increased by 1000."
+ morale_boost_200:0 "Army Morale +200%"
+ morale_boost_200_desc:0 "Land morale increased by 200%."
+ morale_boost_500:0 "Army Morale +500%"
+ morale_boost_500_desc:0 "Land morale increased by 500%."
+ morale_boost_1000:0 "Army Morale +1000%"
+ morale_boost_1000_desc:0 "Land morale increased by 1000%."
+
+ # Decisions — Group A: Migration
+ settler_set_200_title:0 "[Boost] Migration +200"
+ settler_set_200_desc:0 "Set global colonial growth bonus to +200."
+ settler_set_500_title:0 "[Boost] Migration +500"
+ settler_set_500_desc:0 "Set global colonial growth bonus to +500."
+ settler_set_1000_title:0 "[Boost] Migration +1000"
+ settler_set_1000_desc:0 "Set global colonial growth bonus to +1000."
+ settler_off_title:0 "[Boost] Migration — OFF"
+ settler_off_desc:0 "Remove the active migration growth bonus."
+
+ # Decisions — Group B: Morale
+ morale_set_200_title:0 "[Boost] Army Morale +200%"
+ morale_set_200_desc:0 "Set army morale bonus to +200%."
+ morale_set_500_title:0 "[Boost] Army Morale +500%"
+ morale_set_500_desc:0 "Set army morale bonus to +500%."
+ morale_set_1000_title:0 "[Boost] Army Morale +1000%"
+ morale_set_1000_desc:0 "Set army morale bonus to +1000%."
+ morale_off_title:0 "[Boost] Army Morale — OFF"
+ morale_off_desc:0 "Remove the active army morale bonus."

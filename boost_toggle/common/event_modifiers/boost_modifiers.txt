@@ -1,0 +1,27 @@
+### A 组：全局移民增加 ###
+
+settler_boost_200 = {
+	global_colonial_growth = 200
+}
+
+settler_boost_500 = {
+	global_colonial_growth = 500
+}
+
+settler_boost_1000 = {
+	global_colonial_growth = 1000
+}
+
+### B 组：军队士气 ###
+
+morale_boost_200 = {
+	land_morale = 2.00
+}
+
+morale_boost_500 = {
+	land_morale = 5.00
+}
+
+morale_boost_1000 = {
+	land_morale = 10.00
+}

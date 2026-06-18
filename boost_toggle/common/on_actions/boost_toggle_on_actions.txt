@@ -1,0 +1,3 @@
+on_monthly_pulse = {
+	boost_toggle_monthly_effect = yes
+}
