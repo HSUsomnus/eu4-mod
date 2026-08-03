@@ -1,0 +1,58 @@
+namespace = mmtat_settler
+
+# 全局移民增長調整面板。由 mmtat_menu.1 進入。
+# 目前加成值會以國家修正的形式顯示在國家介面的修正清單中。
+country_event = {
+	id = mmtat_settler.1
+	title = mmtat_settler
+	desc = mmtat_settler.1.d
+	picture = MMTAT_COUNTRY_eventPicture
+	is_triggered_only = yes
+
+	# 返回主選單
+	option = {
+		name = mmtat_return
+		hidden_effect = {
+			country_event = { id = mmtat_menu.1 }
+		}
+	}
+
+	# +100，已達上限 5000 時不顯示
+	option = {
+		name = mmtat_settler_add
+		trigger = {
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 5000 } }
+		}
+		change_variable = { which = mmtat_settler_bonus value = 100 }
+		mmtat_settler_refresh = yes
+		hidden_effect = {
+			country_event = { id = mmtat_settler.1 }
+		}
+	}
+
+	# -100，為 0 時不顯示
+	option = {
+		name = mmtat_settler_sub
+		trigger = {
+			check_variable = { which = mmtat_settler_bonus value = 100 }
+		}
+		subtract_variable = { which = mmtat_settler_bonus value = 100 }
+		mmtat_settler_refresh = yes
+		hidden_effect = {
+			country_event = { id = mmtat_settler.1 }
+		}
+	}
+
+	# 重設為 0
+	option = {
+		name = mmtat_settler_reset
+		trigger = {
+			check_variable = { which = mmtat_settler_bonus value = 100 }
+		}
+		set_variable = { which = mmtat_settler_bonus value = 0 }
+		mmtat_settler_clear = yes
+		hidden_effect = {
+			country_event = { id = mmtat_settler.1 }
+		}
+	}
+}

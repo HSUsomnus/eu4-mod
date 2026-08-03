@@ -1,0 +1,459 @@
+# 只處理本功能建立的 mmtat_settler_* 修正，
+# 不動修改器其他功能、Anbennar 或原版提供的殖民加成。
+
+mmtat_settler_clear = {
+	remove_country_modifier = mmtat_settler_100
+	remove_country_modifier = mmtat_settler_200
+	remove_country_modifier = mmtat_settler_300
+	remove_country_modifier = mmtat_settler_400
+	remove_country_modifier = mmtat_settler_500
+	remove_country_modifier = mmtat_settler_600
+	remove_country_modifier = mmtat_settler_700
+	remove_country_modifier = mmtat_settler_800
+	remove_country_modifier = mmtat_settler_900
+	remove_country_modifier = mmtat_settler_1000
+	remove_country_modifier = mmtat_settler_1100
+	remove_country_modifier = mmtat_settler_1200
+	remove_country_modifier = mmtat_settler_1300
+	remove_country_modifier = mmtat_settler_1400
+	remove_country_modifier = mmtat_settler_1500
+	remove_country_modifier = mmtat_settler_1600
+	remove_country_modifier = mmtat_settler_1700
+	remove_country_modifier = mmtat_settler_1800
+	remove_country_modifier = mmtat_settler_1900
+	remove_country_modifier = mmtat_settler_2000
+	remove_country_modifier = mmtat_settler_2100
+	remove_country_modifier = mmtat_settler_2200
+	remove_country_modifier = mmtat_settler_2300
+	remove_country_modifier = mmtat_settler_2400
+	remove_country_modifier = mmtat_settler_2500
+	remove_country_modifier = mmtat_settler_2600
+	remove_country_modifier = mmtat_settler_2700
+	remove_country_modifier = mmtat_settler_2800
+	remove_country_modifier = mmtat_settler_2900
+	remove_country_modifier = mmtat_settler_3000
+	remove_country_modifier = mmtat_settler_3100
+	remove_country_modifier = mmtat_settler_3200
+	remove_country_modifier = mmtat_settler_3300
+	remove_country_modifier = mmtat_settler_3400
+	remove_country_modifier = mmtat_settler_3500
+	remove_country_modifier = mmtat_settler_3600
+	remove_country_modifier = mmtat_settler_3700
+	remove_country_modifier = mmtat_settler_3800
+	remove_country_modifier = mmtat_settler_3900
+	remove_country_modifier = mmtat_settler_4000
+	remove_country_modifier = mmtat_settler_4100
+	remove_country_modifier = mmtat_settler_4200
+	remove_country_modifier = mmtat_settler_4300
+	remove_country_modifier = mmtat_settler_4400
+	remove_country_modifier = mmtat_settler_4500
+	remove_country_modifier = mmtat_settler_4600
+	remove_country_modifier = mmtat_settler_4700
+	remove_country_modifier = mmtat_settler_4800
+	remove_country_modifier = mmtat_settler_4900
+	remove_country_modifier = mmtat_settler_5000
+}
+
+# 先清空再依變數套用唯一對應級距，避免修正堆疊。
+mmtat_settler_refresh = {
+	mmtat_settler_clear = yes
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 100 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 200 } }
+		}
+		add_country_modifier = { name = mmtat_settler_100 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 200 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 300 } }
+		}
+		add_country_modifier = { name = mmtat_settler_200 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 300 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 400 } }
+		}
+		add_country_modifier = { name = mmtat_settler_300 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 400 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 500 } }
+		}
+		add_country_modifier = { name = mmtat_settler_400 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 500 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 600 } }
+		}
+		add_country_modifier = { name = mmtat_settler_500 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 600 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 700 } }
+		}
+		add_country_modifier = { name = mmtat_settler_600 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 700 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 800 } }
+		}
+		add_country_modifier = { name = mmtat_settler_700 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 800 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 900 } }
+		}
+		add_country_modifier = { name = mmtat_settler_800 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 900 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1000 } }
+		}
+		add_country_modifier = { name = mmtat_settler_900 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1000 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1100 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1000 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1100 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1200 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1100 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1200 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1300 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1200 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1300 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1400 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1300 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1400 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1500 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1400 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1500 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1600 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1500 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1600 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1700 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1600 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1700 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1800 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1700 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1800 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 1900 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1800 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 1900 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2000 } }
+		}
+		add_country_modifier = { name = mmtat_settler_1900 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2000 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2100 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2000 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2100 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2200 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2100 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2200 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2300 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2200 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2300 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2400 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2300 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2400 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2500 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2400 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2500 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2600 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2500 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2600 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2700 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2600 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2700 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2800 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2700 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2800 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 2900 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2800 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 2900 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3000 } }
+		}
+		add_country_modifier = { name = mmtat_settler_2900 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3000 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3100 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3000 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3100 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3200 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3100 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3200 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3300 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3200 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3300 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3400 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3300 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3400 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3500 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3400 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3500 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3600 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3500 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3600 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3700 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3600 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3700 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3800 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3700 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3800 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 3900 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3800 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 3900 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4000 } }
+		}
+		add_country_modifier = { name = mmtat_settler_3900 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4000 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4100 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4000 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4100 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4200 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4100 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4200 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4300 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4200 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4300 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4400 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4300 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4400 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4500 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4400 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4500 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4600 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4500 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4600 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4700 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4600 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4700 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4800 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4700 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4800 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 4900 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4800 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 4900 }
+			NOT = { check_variable = { which = mmtat_settler_bonus value = 5000 } }
+		}
+		add_country_modifier = { name = mmtat_settler_4900 duration = -1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { which = mmtat_settler_bonus value = 5000 }
+		}
+		add_country_modifier = { name = mmtat_settler_5000 duration = -1 }
+	}
+}
