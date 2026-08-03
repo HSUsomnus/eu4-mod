@@ -89,7 +89,7 @@ Steam restores the workshop folder on every Anbennar update, wiping all foreign 
 
 | 檔案 | 內容 |
 |---|---|
-| `events/mmtat_settler.txt` | 面板事件 `mmtat_settler.1`，四個選項 |
+| `events/mmtat_settler.txt` | 面板事件 `mmtat_settler.1` + 隱藏中繼 `mmtat_settler.2` |
 | `common/event_modifiers/mmtat_settler_modifiers.txt` | 50 個級距 `mmtat_settler_100` … `mmtat_settler_5000` |
 | `common/scripted_effects/mmtat_settler_effects.txt` | `mmtat_settler_clear` / `mmtat_settler_refresh` |
 | `localisation/mmtat_settler_l_english.yml` | 介面字串與 50 個修正名稱 |
@@ -121,6 +121,29 @@ EU4 **沒有** `global_settler_increase` 這個修正欄位。初版誤用了它
 
 `remove_country_modifier` 對不存在的修正是 no-op，所以全部移除再套用是安全的，也保證任何時間最多只有一個 `mmtat_settler_*` 生效。腳本只處理自己建立的 `mmtat_settler_*`，不動修改器其他功能、Anbennar 或原版的殖民加成。
 
+### 面板保持開啟：必須用隱藏中繼事件
+
+**EU4 的事件無法在自己內部再觸發自己。** 在選項裡直接寫
+`country_event = { id = mmtat_settler.1 }` 面板只會關閉，不會重開。
+
+正確做法是經由一個 `hidden = yes` 的中繼事件，由它的選項把面板開回來：
+
+```
+選項 → hidden_effect = { country_event = { id = mmtat_settler.2 } }
+       ↓
+mmtat_settler.2（hidden = yes）
+  option = { country_event = { id = mmtat_settler.1 } }   ← 面板重新開啟
+```
+
+這不是猜測——Anbennar 自己的設定選單就是這樣做的：`anb_settings.3` 的
+**32 個選項全部**走 `hidden_effect = { country_event = { id = anb_settings.100 } }`，
+而 `anb_settings.100` 是個 `hidden = yes` 的中繼，其唯一選項再開回 `anb_settings.3`。
+
+只有「返回」直接跳回 `mmtat_menu.1`，因此按到返回才會離開面板。
+
+EU4 events cannot re-fire themselves. Use a `hidden = yes` relay event whose option
+reopens the panel — the same pattern Anbennar uses for `anb_settings.3` / `.100`.
+
 ### 邊界處理
 
 到達 0 或 5000 時，對應按鈕直接**不顯示**（透過 option `trigger`）。事件選項沒有「變灰」這個狀態，只有顯示或不顯示。
@@ -146,7 +169,8 @@ EU4 **沒有** `global_settler_increase` 這個修正欄位。初版誤用了它
 Partially verified in-game on 2026-08-04; the rest is pending.
 
 - [x] 面板出現、中文顯示正常、變數改動與修正切換正常（2026-08-04 實機確認）
-- [ ] 第一次 `+100` 是否取得 `global_colonial_growth = 100`（欄位修正後待重驗）
+- [x] 數值正確進入「全局移民增加」（2026-08-04 實機確認，+600.00）
+- [ ] 面板在按下 +100／-100／歸零後是否保持開啟（中繼事件加入後待驗）
 - [ ] 連按 `+100` 是否正確累加，且任何時間只有一個 `mmtat_settler_*` 修正
 - [ ] `-100` 與歸零行為
 - [ ] 0 與 5000 邊界時按鈕是否正確隱藏
