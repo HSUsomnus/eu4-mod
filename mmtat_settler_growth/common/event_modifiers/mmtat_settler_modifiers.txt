@@ -1,202 +1,202 @@
-# 全局移民增長級距，每 100 一級共 50 級。
+# 全局移民增長級距（欄位為 global_colonial_growth；EU4 沒有 global_settler_increase），每 100 一級共 50 級。
 # 同一時間只會存在一個 mmtat_settler_* 修正，切換由 mmtat_settler_refresh 負責。
 
 mmtat_settler_100 = {
-	global_settler_increase = 100
+	global_colonial_growth = 100
 }
 
 mmtat_settler_200 = {
-	global_settler_increase = 200
+	global_colonial_growth = 200
 }
 
 mmtat_settler_300 = {
-	global_settler_increase = 300
+	global_colonial_growth = 300
 }
 
 mmtat_settler_400 = {
-	global_settler_increase = 400
+	global_colonial_growth = 400
 }
 
 mmtat_settler_500 = {
-	global_settler_increase = 500
+	global_colonial_growth = 500
 }
 
 mmtat_settler_600 = {
-	global_settler_increase = 600
+	global_colonial_growth = 600
 }
 
 mmtat_settler_700 = {
-	global_settler_increase = 700
+	global_colonial_growth = 700
 }
 
 mmtat_settler_800 = {
-	global_settler_increase = 800
+	global_colonial_growth = 800
 }
 
 mmtat_settler_900 = {
-	global_settler_increase = 900
+	global_colonial_growth = 900
 }
 
 mmtat_settler_1000 = {
-	global_settler_increase = 1000
+	global_colonial_growth = 1000
 }
 
 mmtat_settler_1100 = {
-	global_settler_increase = 1100
+	global_colonial_growth = 1100
 }
 
 mmtat_settler_1200 = {
-	global_settler_increase = 1200
+	global_colonial_growth = 1200
 }
 
 mmtat_settler_1300 = {
-	global_settler_increase = 1300
+	global_colonial_growth = 1300
 }
 
 mmtat_settler_1400 = {
-	global_settler_increase = 1400
+	global_colonial_growth = 1400
 }
 
 mmtat_settler_1500 = {
-	global_settler_increase = 1500
+	global_colonial_growth = 1500
 }
 
 mmtat_settler_1600 = {
-	global_settler_increase = 1600
+	global_colonial_growth = 1600
 }
 
 mmtat_settler_1700 = {
-	global_settler_increase = 1700
+	global_colonial_growth = 1700
 }
 
 mmtat_settler_1800 = {
-	global_settler_increase = 1800
+	global_colonial_growth = 1800
 }
 
 mmtat_settler_1900 = {
-	global_settler_increase = 1900
+	global_colonial_growth = 1900
 }
 
 mmtat_settler_2000 = {
-	global_settler_increase = 2000
+	global_colonial_growth = 2000
 }
 
 mmtat_settler_2100 = {
-	global_settler_increase = 2100
+	global_colonial_growth = 2100
 }
 
 mmtat_settler_2200 = {
-	global_settler_increase = 2200
+	global_colonial_growth = 2200
 }
 
 mmtat_settler_2300 = {
-	global_settler_increase = 2300
+	global_colonial_growth = 2300
 }
 
 mmtat_settler_2400 = {
-	global_settler_increase = 2400
+	global_colonial_growth = 2400
 }
 
 mmtat_settler_2500 = {
-	global_settler_increase = 2500
+	global_colonial_growth = 2500
 }
 
 mmtat_settler_2600 = {
-	global_settler_increase = 2600
+	global_colonial_growth = 2600
 }
 
 mmtat_settler_2700 = {
-	global_settler_increase = 2700
+	global_colonial_growth = 2700
 }
 
 mmtat_settler_2800 = {
-	global_settler_increase = 2800
+	global_colonial_growth = 2800
 }
 
 mmtat_settler_2900 = {
-	global_settler_increase = 2900
+	global_colonial_growth = 2900
 }
 
 mmtat_settler_3000 = {
-	global_settler_increase = 3000
+	global_colonial_growth = 3000
 }
 
 mmtat_settler_3100 = {
-	global_settler_increase = 3100
+	global_colonial_growth = 3100
 }
 
 mmtat_settler_3200 = {
-	global_settler_increase = 3200
+	global_colonial_growth = 3200
 }
 
 mmtat_settler_3300 = {
-	global_settler_increase = 3300
+	global_colonial_growth = 3300
 }
 
 mmtat_settler_3400 = {
-	global_settler_increase = 3400
+	global_colonial_growth = 3400
 }
 
 mmtat_settler_3500 = {
-	global_settler_increase = 3500
+	global_colonial_growth = 3500
 }
 
 mmtat_settler_3600 = {
-	global_settler_increase = 3600
+	global_colonial_growth = 3600
 }
 
 mmtat_settler_3700 = {
-	global_settler_increase = 3700
+	global_colonial_growth = 3700
 }
 
 mmtat_settler_3800 = {
-	global_settler_increase = 3800
+	global_colonial_growth = 3800
 }
 
 mmtat_settler_3900 = {
-	global_settler_increase = 3900
+	global_colonial_growth = 3900
 }
 
 mmtat_settler_4000 = {
-	global_settler_increase = 4000
+	global_colonial_growth = 4000
 }
 
 mmtat_settler_4100 = {
-	global_settler_increase = 4100
+	global_colonial_growth = 4100
 }
 
 mmtat_settler_4200 = {
-	global_settler_increase = 4200
+	global_colonial_growth = 4200
 }
 
 mmtat_settler_4300 = {
-	global_settler_increase = 4300
+	global_colonial_growth = 4300
 }
 
 mmtat_settler_4400 = {
-	global_settler_increase = 4400
+	global_colonial_growth = 4400
 }
 
 mmtat_settler_4500 = {
-	global_settler_increase = 4500
+	global_colonial_growth = 4500
 }
 
 mmtat_settler_4600 = {
-	global_settler_increase = 4600
+	global_colonial_growth = 4600
 }
 
 mmtat_settler_4700 = {
-	global_settler_increase = 4700
+	global_colonial_growth = 4700
 }
 
 mmtat_settler_4800 = {
-	global_settler_increase = 4800
+	global_colonial_growth = 4800
 }
 
 mmtat_settler_4900 = {
-	global_settler_increase = 4900
+	global_colonial_growth = 4900
 }
 
 mmtat_settler_5000 = {
-	global_settler_increase = 5000
+	global_colonial_growth = 5000
 }

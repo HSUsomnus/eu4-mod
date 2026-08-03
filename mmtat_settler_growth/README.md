@@ -2,9 +2,9 @@
 
 Global Settler Growth — an add-on for the Anbennar Trainer
 
-在**安本纳尔修改器**的主選單裡加一個「全局移民增長」面板，用 +100 / -100 / 歸零三個按鈕調整 `global_settler_increase`，範圍 0～5000。
+在**安本纳尔修改器**的主選單裡加一個「全局移民增長」面板，用 +100 / -100 / 歸零三個按鈕調整 `global_colonial_growth`（遊戲內顯示為「全局移民增加」），範圍 0～5000。
 
-Adds a "Global Settler Growth" panel to the Anbennar Trainer's main menu, adjusting `global_settler_increase` in ±100 steps between 0 and 5000.
+Adds a "Global Settler Growth" panel to the Anbennar Trainer's main menu, adjusting `global_colonial_growth` in ±100 steps between 0 and 5000.
 
 **支援版本 / Supported version:** EU4 1.37.5.*
 
@@ -94,9 +94,23 @@ Steam restores the workshop folder on every Anbennar update, wiping all foreign 
 | `common/scripted_effects/mmtat_settler_effects.txt` | `mmtat_settler_clear` / `mmtat_settler_refresh` |
 | `localisation/mmtat_settler_l_english.yml` | 介面字串與 50 個修正名稱 |
 
+### ⚠️ 欄位名稱：`global_colonial_growth`
+
+EU4 **沒有** `global_settler_increase` 這個修正欄位。初版誤用了它，遊戲會靜默忽略整個
+修正（面板、變數、修正切換全都正常運作，但數值不會進到「全局移民增加」）。
+
+診斷方式 — `logs\error.log`：
+
+```
+[modifier.cpp]: Unknown modifier. Type: "global_settler_increase", File: "..."
+```
+
+正確欄位是 `global_colonial_growth`，原版 23 個檔、Anbennar 74 個檔都用它；
+原版的「开疆扩土」(`expand_colonial_territory`) 就是這個欄位的來源之一。
+
 ### 為什麼是 50 個修正而不是一個動態值
 
-`global_settler_increase` 是 modifier 欄位，不能直接綁國家變數。所以改用：
+`global_colonial_growth` 是 modifier 欄位，不能直接綁國家變數。所以改用：
 
 ```
 國家變數 mmtat_settler_bonus 保存目前級距
@@ -127,12 +141,12 @@ Steam restores the workshop folder on every Anbennar update, wiping all foreign 
 
 ## 驗收 / Acceptance checklist
 
-尚未完成實機驗收。以下項目待確認：
+部分已於 2026-08-04 實機確認，其餘待驗。
 
-Not yet verified in-game. Pending:
+Partially verified in-game on 2026-08-04; the rest is pending.
 
-- [ ] 面板是否出現在修改器主選單
-- [ ] 第一次 `+100` 是否取得 `global_settler_increase = 100`
+- [x] 面板出現、中文顯示正常、變數改動與修正切換正常（2026-08-04 實機確認）
+- [ ] 第一次 `+100` 是否取得 `global_colonial_growth = 100`（欄位修正後待重驗）
 - [ ] 連按 `+100` 是否正確累加，且任何時間只有一個 `mmtat_settler_*` 修正
 - [ ] `-100` 與歸零行為
 - [ ] 0 與 5000 邊界時按鈕是否正確隱藏
