@@ -1,0 +1,17 @@
+倉庫：HSUsomnus/eu4-mod　PR #1　分支 docs/readme-friendly　基準 origin/master
+
+== 連結檢查 ==
+  站內相對連結：2 個，失效 0 個
+  https://steamcommunity.com/sharedfiles/filedetails/?id=3756037459 → HTTP 200
+  https://steamcommunity.com/sharedfiles/filedetails/?id=1385440355 → HTTP 200
+  https://github.com/matanki-saito/EU4dll → HTTP 200
+
+== 隱私掃描（本 PR 全部待合併 commit 的新增內容與 commit 資訊）==
+  家目錄路徑：0 筆
+  本機磁碟路徑：0 筆
+  Email（非 noreply）：0 筆
+  金鑰樣式：0 筆
+  session ID 樣式：0 筆
+  使用者真名／帳號字串：0 筆
+  待合併 commit：
+    c73983d  作者 HSUsomnus <227043812+HSUsomnus@users.noreply.github.com>  提交者 HSUsomnus <227043812+HSUsomnus@users.noreply.github.com>  「docs: 改寫 README 為白話版本」
